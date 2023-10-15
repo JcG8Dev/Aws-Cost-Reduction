@@ -1,0 +1,53 @@
+Relatório de Implementação de Serviços AWS
+
+Data: 14/10/2023
+Empresa: Abstergo Industries
+Responsável: Josiane Cristina Gonçalves
+
+Introdução
+
+Este relatório apresenta o processo de implementação de ferramentas na empresa Abstergo Industries, realizado por Josiane Cristina Gonçalves. O objetivo do projeto foi elencar 3 serviços AWS, com a finalidade de realizar redução de custos em Gerenciamento de Mapas Virtuais.
+
+Descrição do Projeto
+
+O projeto de implementação de ferramentas foi dividido em 3 etapas, cada uma com seus objetivos específicos. A seguir, serão descritas as etapas do projeto:
+
+Etapa 1: - Amazon CloudWatch
+
+- Monitoramento Eficiente: O CloudWatch permite a monitorização de recursos e aplicativos em tempo real, identificando padrões e otimizando o uso de recursos.
+- Coleta de Dados: Permite a coleta de dados de log, métricas de eventos, fornecendo insights detalhados sobre o desempenho da infraestrutura.
+- Alertas Personalizados: Configuração de alarmes para notificar sobre eventos importantes, como pico de tráfego, permitindo ação proativa.
+- Autoescalonamento: Pode ser integrado com serviços como o Auto Scaling para dimensionamento automático com base em métricas específicas.
+
+Essa primeria etapa com o CloudWatch fornecerá à Abstergo Industries, uma visibilidade detalhada sobre o uso de recursos, permitindo uma melhor compreensão do ambiente e proporcionando a base para otimizações subsequentes.
+
+Implementação:
+- Configurar métricas relevantes para o gerenciamento de mapas virtuais, como o uso de CPU, memória e armazenamento.
+- Estabelecer alarmes para notificar sobre comportamentos anômalos ou quando recursos atingem limites específicos.
+- Utilizar logs para análise de eventos e resolução rápida de problemas.
+
+Etapa 2: Amazon EC2 Auto Scaling
+
+- Dimensionamento Automático: O EC2 Auto Scaling ajusta automaticamente a quantidade de instâncias EC2 disponíveis com base nas condições definidas, como carga de trabalho ou horários específicos.
+- Economia de Custos: Permite manter o número mínimo de instâncias necessárias para atender à demanda, reduzindo custos  durante períodos de menor tráfego.
+- Balanceamento de Carga: Pode ser integrado com serviços de balanceamento de carga, distribuindo uniformemente as solicitações entre as instâncias para otimizar o desempenho.
+- Integração com CloudWatch: Utiliza métricas do CloudWatch para tomar decisões inteligentes de dimensionamento.
+
+Ao implementar o EC2 Auto Scaling, a Abstergo Industries poderá garantir que a capacidade computacional seja ajustada dinamicamente, evitando custos desnecessários durante períodos de menor atividade.
+
+Implementação:
+- Configurar grupos de Auto Scaling com políticas que ajustam automaticamente o número de instâncias com base em métricas específicas, como a carga da CPU.
+- Definir políticas de escala para adicionar ou remover instâncias conforme necessário, otimizando custos e garantindo desempenho.
+- Integrar com CloudWatch para monitorar e ajustar o dimensionamento com base em métricas personalizadas.
+
+Etapa 3: Amazon S3 Lifecycle Policies
+- Gerenciamento Automático de Dados: Permite a configuração de politicas automatizadas para mover ou excluir dados com base em critérios definidos, como idade dos dados ( tempo desde a última modificação) ou acesso.
+- Redução de Armazenamento: Transfere automaticamente dados para classes de armazenamento mais econômicas à medida que envelhecem, reduzindo custos de armazenamento.
+- Conformidade e Eficiência: Ajuda na conformidade com políticas de retenção de dados, garantindo uma gestão eficiente e econômica dos recursos de armazenamento.
+
+Ao implementar políticas de ciclo de vida no Amazon S3, a Abstergo pode garantir que os dados sejam armazenados de maneira eficiente, movendo-os para classes mais econômicas à medida que envelhecem ou se tornam menos acessados.
+
+Implementação:
+- Criar políticas de ciclo de vida no Amazon S3 para definir ações automáticas em objetos, como transição para classes de armazenamento de menor custo.
+- Definir regras com base em critérios como tempo desde a última modificação ou padrões de acesso.
+- Automatizar a exclusão de dados obsoletos ou transferir para o Glacier para armazenamento de longo prazo e redução de custos.
